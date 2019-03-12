@@ -12,7 +12,29 @@
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 <script src="js/vendor.js"></script>
-<script src="js/jpreloader.js"></script>
+<script src="js/jpreloader.min.js"></script>
+
+<script type='text/javascript'>
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+(function() {
+var gads = document.createElement('script');
+gads.async = true;
+gads.type = 'text/javascript';
+var useSSL = 'https:' == document.location.protocol;
+gads.src = (useSSL ? 'https:' : 'http:') + 
+'//www.googletagservices.com/tag/js/gpt.js';
+var node = document.getElementsByTagName('script')[0];
+node.parentNode.insertBefore(gads, node);
+})();
+</script>
+<script type='text/javascript'>
+googletag.cmd.push(function() {
+googletag.defineSlot('/8130065/DEMO_SMALL', [200, 200], 'demo-small').addService(googletag.pubads());
+googletag.pubads().enableSingleRequest();
+googletag.enableServices();
+});
+</script>
 <link rel="shortcut icon" href="http://www.inwebson.com/wp-content/themes/inwebson2/favicon.ico" />
 <link rel="canonical" href="http://www.inwebson.com/demo/jpreloader-v2/" />
 </head>
@@ -41,34 +63,42 @@
 		<div class=clearfix></div>
 	</nav>
 	<div class="container">
-	<ul id="set1" class="holder current">
-		<li><img src="http://sphotos-b.ak.fbcdn.net/hphotos-ak-snc6/181548_153793501342544_153515891370305_259700_7241508_n.jpg" /></li>
-		<li><img src="http://sphotos-b.ak.fbcdn.net/hphotos-ak-snc6/196528_158118380910056_153515891370305_283882_234528_n.jpg" /></li>
-		<li><img src="http://sphotos-b.ak.fbcdn.net/hphotos-ak-snc6/196556_159931940728700_153515891370305_293999_6261181_n.jpg" /></li>
-		<li><img src="http://sphotos-b.ak.fbcdn.net/hphotos-ak-ash4/205687_165495210172373_153515891370305_326385_1869822_n.jpg" /></li>
-		<li><img src="http://sphotos-b.ak.fbcdn.net/hphotos-ak-snc6/205600_167760236612537_153515891370305_338177_2160812_n.jpg" /></li>
-		<li><img src="http://sphotos-b.ak.fbcdn.net/hphotos-ak-snc6/248150_174306909291203_153515891370305_374445_3774819_n.jpg" /></li>
-		<li><img src="http://sphotos-b.ak.fbcdn.net/hphotos-ak-snc6/228343_171546129567281_153515891370305_358267_5126730_n.jpg" /></li>
-		<li><img src="http://sphotos-b.ak.fbcdn.net/hphotos-ak-ash4/249232_174478049274089_153515891370305_375652_2662480_n.jpg" /></li>
-		<li><img src="http://sphotos-b.ak.fbcdn.net/hphotos-ak-snc6/268903_186646411390586_153515891370305_435046_34596_n.jpg" /></li>
-		<div class=clearfix></div>
-	</ul>
-	<ul id="set2" class="holder">
-		<li><div id="li1"></div></li>
-		<li><div id="li2"></div></li>
-		<li><div id="li3"></div></li>
-		<li><div id="li4"></div></li>
-		<li><div id="li5"></div></li>
-		<li><div id="li6"></div></li>
-		<li><div id="li7"></div></li>
-		<li><div id="li8"></div></li>
-		<li><div id="li9"></div></li>
-	</ul>
-	<div class="clearfix"></div>
+		<ul id="set1" class="holder current">
+			<li><img src="http://sphotos-b.ak.fbcdn.net/hphotos-ak-snc6/181548_153793501342544_153515891370305_259700_7241508_n.jpg" /></li>
+			<li><img src="http://sphotos-b.ak.fbcdn.net/hphotos-ak-snc6/196528_158118380910056_153515891370305_283882_234528_n.jpg" /></li>
+			<li><img src="http://sphotos-b.ak.fbcdn.net/hphotos-ak-snc6/196556_159931940728700_153515891370305_293999_6261181_n.jpg" /></li>
+			<li><img src="http://sphotos-b.ak.fbcdn.net/hphotos-ak-ash4/205687_165495210172373_153515891370305_326385_1869822_n.jpg" /></li>
+			<li><img src="http://sphotos-b.ak.fbcdn.net/hphotos-ak-snc6/205600_167760236612537_153515891370305_338177_2160812_n.jpg" /></li>
+			<li><img src="http://sphotos-b.ak.fbcdn.net/hphotos-ak-snc6/248150_174306909291203_153515891370305_374445_3774819_n.jpg" /></li>
+			<li><img src="http://sphotos-b.ak.fbcdn.net/hphotos-ak-snc6/228343_171546129567281_153515891370305_358267_5126730_n.jpg" /></li>
+			<li><img src="http://sphotos-b.ak.fbcdn.net/hphotos-ak-ash4/249232_174478049274089_153515891370305_375652_2662480_n.jpg" /></li>
+			<li><img src="http://sphotos-b.ak.fbcdn.net/hphotos-ak-snc6/268903_186646411390586_153515891370305_435046_34596_n.jpg" /></li>
+		</ul>
+		<ul id="set2" class="holder">
+			<li><div id="li1"></div></li>
+			<li><div id="li2"></div></li>
+			<li><div id="li3"></div></li>
+			<li><div id="li4"></div></li>
+			<li><div id="li5"></div></li>
+			<li><div id="li6"></div></li>
+			<li><div id="li7"></div></li>
+			<li><div id="li8"></div></li>
+			<li><div id="li9"></div></li>
+		</ul>
 	</div>
 	<div class="description txtright">
 		Images by <a href="http://www.facebook.com/MichaelShawPhotography">Mike Shaw</a>, Cheshire UK based photographer.
 	</div>
+	</div>
+	
+	<!-- your ad here -->
+	<div id="ad-holder">
+		<div id='demo-small' style='width:200px; height:200px;'>
+		<script type='text/javascript'>
+			googletag.cmd.push(function() { googletag.display('demo-small'); });
+		</script>
+		</div>
+		<div class="buttonclose"><a href="#">Close Ads [x]</a></div>
 	</div>
 	
 </section>
@@ -167,5 +197,32 @@ $(document).ready( function() {
 	}
 });
 </script>
+
+<!-- Start analytics code -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27017940-1']);
+  _gaq.push(['_setDomainName', 'inwebson.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<script type="text/javascript">
+	var sc_project=7402608; 
+	var sc_invisible=1; 
+	var sc_security="6fd2ac7d"; 
+</script>
+<script type="text/javascript"
+src="http://www.statcounter.com/counter/counter.js"></script>
+<!-- End analytics code -->
 </body>
 </html>
+
+
+
+
+
